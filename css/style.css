@@ -1,6 +1,6 @@
 *{margin: 0;padding: 0;box-sizing: border-box;}
 ul{list-style: none;}
-a{text-decoration: none; color: #000;}
+a{text-decoration: none; color: #333;}
 .ir_so{opacity: 0;}
 
 .inner{
@@ -250,7 +250,7 @@ main #banner{
 }
 #banner .mainslide .slideBox{
     transition: .5s;
-    
+    width: 1400px;
 }
 #banner .mainslide .slideBox a{
     display: block;
@@ -449,8 +449,11 @@ main #banner{
 
 #notice{
     margin-top: 50px;
-    width: 1419px;
+
     height: 427px;
+}
+#notice .inner{
+    display: flex;
 }
 #notice .inner .notice-box{
     width: 1000px;
@@ -503,6 +506,7 @@ main #banner{
     margin-top: 20px;
 }
 .notice-box .notice-listbx .notice-item{
+    width: 285px;
     height: 100%;
 }
 .notice-box .notice-listbx .notice-item a{
@@ -528,6 +532,48 @@ main #banner{
 .notice-box .notice-listbx .notice-item span{
     font-size: 18px;
 }
-#notice .inner .notice-slide{
-    width: 380px;
+.notice-listbx .notice-lists{
+    width: 670px;
+    margin-left: 40px;
+    margin-top: 25px;
+}
+.notice-listbx .notice-lists ul{}
+.notice-listbx .notice-lists ul li{
+    margin-bottom: 15px;
+    list-style: disc;
+    font-size: 15px;
+}
+.notice-listbx .notice-lists ul li a{
+    display: flex;
+    justify-content: space-between;
+}
+.notice-listbx .notice-lists ul li a span{}
+.notice-listbx .notice-lists ul li a em{}
+
+#notice .inner .notice-slidebox{
+    width: 320px;
+    height: 300px;
+    background: #00529b;
+    border-radius: 10px;
+    padding: 20px 20px 0;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.notice-slidebox .notice-slidebox-slides{
+    width: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.notice-slidebox-slides .notice-slidebox-slide{
+    display: flex;
+    width: 1400px;
+}
+.notice-slidebox-slide a{
+    width: 280px;
+    
+}
+.notice-slidebox-slide a img{
+    display: block;
+    width: 100%;
 }
