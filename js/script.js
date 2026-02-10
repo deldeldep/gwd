@@ -1,87 +1,99 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const slideBox = document.querySelector(".slideBox");
-    const slides = slideBox.querySelectorAll("a");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-    const toggleBtn = document.getElementById("toggleBtn");
-    const currentPage = document.getElementById("current-page");
+$(document).ready(function() {
+    // 공통 슬라이드 로직을 .each()로 루프 돌림
+    $('.mainslide, .notice-slidebox').each(function(index, item) {
+        // 1. 해당 슬라이드 내의 요소들 정의
+        const $this = $(item); // 현재 슬라이드 박스
+        const $slideBox = $this.find('.slideBox, .notice-slidebox-slide');
+        const $slides = $slideBox.find('a');
+        const $currentPage = $this.find('#current-page, .current-page'); // ID가 중복되면 class로 바꾸는게 좋습니다
+        
+        const $btnPrev = $this.find('.btn-prev');
+        const $btnNext = $this.find('.btn-next');
+        const $btnToggle = $this.find('#toggleBtn, .btn-pause, .btn-play');
 
-    const slideWidth = 840;
-    const slideCount = slides.length;
-    let currentIndex = 0;
-    let interval = null;
-    let isPlaying = true;
+        // 2. 개별 변수 설정
+        const slideCount = $slides.length;
+        const slideWidth = $slides.width(); // 각각의 너비 자동 계산
+        let currentIndex = 0;
+        let timer = null;
+        let isPlaying = true;
 
-    function updateSlide() {
-        slideBox.style.left = -(slideWidth * currentIndex) + "px";
-        currentPage.textContent = String(currentIndex + 1).padStart(2, "0");
-    }
+        // 3. 이동 함수
+        function moveSlide(idx) {
+            if (idx >= slideCount) {
+                currentIndex = 0;
+            } else if (idx < 0) {
+                currentIndex = slideCount - 1;
+            } else {
+                currentIndex = idx;
+            }
 
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slideCount;
-        updateSlide();
-    }
+            // 애니메이션 실행
+            $slideBox.stop().animate({
+                left: -(currentIndex * slideWidth)
+            }, 500);
 
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-        updateSlide();
-    }
-
-    function startAutoPlay() {
-        interval = setInterval(nextSlide, 2000);
-        isPlaying = true;
-
-        toggleBtn.classList.remove("play");
-        toggleBtn.classList.add("stop");
-    }
-
-    function stopAutoPlay() {
-        clearInterval(interval);
-        isPlaying = false;
-
-        toggleBtn.classList.remove("stop");
-        toggleBtn.classList.add("play");
-    }
-
-    // 이벤트
-    nextBtn.addEventListener("click", nextSlide);
-    prevBtn.addEventListener("click", prevSlide);
-
-    toggleBtn.addEventListener("click", function () {
-        if (isPlaying) {
-            stopAutoPlay();
-        } else {
-            startAutoPlay();
+            // 페이지 번호 업데이트 (01, 02...)
+            let displayNum = currentIndex + 1;
+            $this.find('#current-page').text(displayNum < 10 ? '0' + displayNum : displayNum);
         }
-    });
 
-    // 초기 실행
-    updateSlide();
-    startAutoPlay();
+        // 4. 재생/정지 제어
+        function startAutoPlay() {
+            stopAutoPlay(); // 중복 방지
+            timer = setInterval(function() {
+                moveSlide(currentIndex + 1);
+            }, 2000);
+            isPlaying = true;
+            $btnToggle.removeClass('play').addClass('stop'); // CSS에 맞춰 클래스 교체
+        }
+
+        function stopAutoPlay() {
+            clearInterval(timer);
+            isPlaying = false;
+            $btnToggle.removeClass('stop').addClass('play');
+        }
+
+        // 5. 이벤트 바인딩 (현재 슬라이드 내부의 버튼만 작동)
+        $btnNext.on('click', function() {
+            moveSlide(currentIndex + 1);
+        });
+
+        $btnPrev.on('click', function() {
+            moveSlide(currentIndex - 1);
+        });
+
+        $btnToggle.on('click', function() {
+            if (isPlaying) {
+                stopAutoPlay();
+            } else {
+                startAutoPlay();
+            }
+        });
+
+        // 6. 각 슬라이드별 초기 실행
+        startAutoPlay();
+    });
 });
 
+
+
 $(function(){
-    /* const slide = $(".notice-slidebox-slide")
-    const slideList = $(".notice-slidebox-slide a")
-    const prev = $(".notice-slidebox-control .btn-prev")
-    const pause = $(".notice-slidebox-control .btn-pause")
-    const play = $(".notice-slidebox-control .btn-play")
-    const next = $(".notice-slidebox-control .btn-next")
 
-    let i = 0;
 
-    slide.append(slideList.eq(0).clone());
+    $(".notice-title").click(function(e){
+        e.preventDefault();
+        $(".notice-title").removeClass("active")
+        $(this).addClass("active")
 
-    function nextslide (){
-        i++;
-        slide.animate({left: "-280" *-i + "px"}, 2000, function(){
-            if(i === 2){
-                slide.css("left", "0px");
-                i=0
-            }
-        })
-    };    
-    setInterval(nextslide, 3000); */
+        let index=$(this).index();
+
+        $('.notice-listbx').hide();
+        $(".notice-listbx").removeClass("active") 
+        $('.notice-listbx').eq(index).show(); 
+        $('.notice-listbx').eq(index).find('.notice-item').addClass("active"); 
+
+    })
 
 
     $(".tabs ul li").click(function(e){
@@ -89,6 +101,12 @@ $(function(){
         $(".tabs ul li").removeClass("on")
         $(this).addClass("on")
 
+        let i=$(this).index();
+
+        $('.tabcon>div').hide(); 
+        $('.tabcon>div').eq(i).show(); 
+        $('.tabcon>div').eq(i).find('.ill-bx').css({rotateY : '0deg'}); 
 
     })
 })
+

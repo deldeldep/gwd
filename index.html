@@ -233,9 +233,9 @@
                     </div>
                     <div class="controls" id="controlsBox">
                         <span class="page-info"><span id="current-page">01</span> / 06</span>
-                        <div class="btn btn-prev" id="prevBtn">이전</div>
-                        <div class="btn btn-pause stop" id="toggleBtn">정지</div>
-                        <div class="btn btn-next" id="nextBtn">다음</div>
+                        <div class="btn btn-prev prevBtn">이전</div>
+                        <div class="btn btn-pause stop toggleBtn">정지</div>
+                        <div class="btn btn-next nextBtn">다음</div>
                         <div class="btn btn-list">목록</div>
                     </div>
                 </div>
@@ -288,79 +288,331 @@
             <h2 class="ir_so">공지</h2>
             <div class="inner">                
                 <div class="notice-box">
-                    <div class="notice-titles">
-                        <div class="notice-title first active">
+                    <ul class="notice-titles">
+                        <li class="notice-title first active">
                             <a href="#">알림사항</a>
-                        </div>
-                        <div class="notice-title">
+                        </li>
+                        <li class="notice-title">
                             <a href="#">공고/고시</a>
-                        </div>
-                        <div class="notice-title">
+                        </li>
+                        <li class="notice-title">
                             <a href="#">시험정보</a>
-                        </div>
-                        <div class="notice-title">
+                        </li>
+                        <li class="notice-title">
                             <a href="#">채용정보</a>
-                        </div>
-                        <div class="notice-title">
+                        </li>
+                        <li class="notice-title">
                             <a href="#">입법예고</a>
-                        </div>
-                        <div class="notice-title">
+                        </li>
+                        <li class="notice-title">
                             <a href="#">인사정보</a>
-                        </div>
+                        </li>
                         <div class="notice-title plus">
                             <a href="#" class="ir_so">plus</a>
                         </div>
-                    </div>
-                    <div class="notice-listbx">
-                        <div class="notice-item">
-                            <a href="#">
-                                <em>2025-10-20</em>
-                                <span>공무원 사칭 사기 주의!!!</span>
-                            </a>
-                        </div>
-                        <div class="notice-lists">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <span>미분양 주택 현황(2025년 12월말 기준)</span>
-                                        <em>2026-02-02</em>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>('26년 1월분) 고향사랑기부제 답례품 정산 안내</span>
-                                        <em>2026-02-02</em>
-                                    </a>
-                                    
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>수산물 방사능 검사 결과(1. 28. 기준)</span>
-                                        <em>2026-02-02</em>
-                                    </a>
-                                    
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>강원특별자치도보건환경연구원 감염병자료실(2026년 4주차, 01.18.~.01.24.) 배포</span>
-                                        <em>2026-01-30</em>
-                                    </a>                                   
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>2026년 설 명절 전통시장 주변도로 주차허용구간 안내</span>
-                                        <em>2026-01-30</em>
-                                    </a>                                   
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span>'26. 2월 도내 주요 문화예술행사 계획</span>
-                                        <em>2026-01-30</em>
-                                    </a>                                   
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    </ul>
+                    <ul class="notice-lists">
+                        <li class="notice-listbx">
+                            <div class="notice-item">
+                                <a href="#">
+                                    <em>2025-10-20</em>
+                                    <span>공무원 사칭 사기 주의!!</span>
+                                </a>
+                            </div>
+                            <div class="notice-lists">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span>미분양 주택 현황(2025년 12월말 기준)</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>('26년 1월분) 고향사랑기부제 답례품 정산 안내</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>수산물 방사능 검사 결과(1. 28. 기준)</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>강원특별자치도보건환경연구원 감염병자료실(2026년 4주차, 01.18.~.01.24.) 배포</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>2026년 설 명절 전통시장 주변도로 주차허용구간 안내</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>'26. 2월 도내 주요 문화예술행사 계획</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="notice-listbx">
+                            <div class="notice-item">
+                                <a href="#">
+                                    <em>2026-02-10</em>
+                                    <span>강원특별자치도 내수면자원센터 신기술·특허공법(제품) 선정위원회 평가위원(후보자) 공개모집 재공고</span>
+                                </a>
+                            </div>
+                            <div class="notice-lists">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span>기부금품 모집등록 공고(정선읍 문화체육축제위원회)</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>('26년 1월분) 고향사랑기부제 답례품 정산 안내</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>수산물 방사능 검사 결과(1. 28. 기준)</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>강원특별자치도보건환경연구원 감염병자료실(2026년 4주차, 01.18.~.01.24.) 배포</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>2026년 설 명절 전통시장 주변도로 주차허용구간 안내</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>'26. 2월 도내 주요 문화예술행사 계획</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="notice-listbx">
+                            <div class="notice-item">
+                                <a href="#">
+                                    <em>2026-01-21</em>
+                                    <span>2026년도 제1·2·3회 강원특별자치도 공무원 임용시험 시행계획 공고</span>
+                                </a>
+                            </div>
+                            <div class="notice-lists">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span>2026년도 제1회 강원특별자치도 공무원 임용시험 응시원서 접수현황 안내</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>('26년 1월분) 고향사랑기부제 답례품 정산 안내</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>수산물 방사능 검사 결과(1. 28. 기준)</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>강원특별자치도보건환경연구원 감염병자료실(2026년 4주차, 01.18.~.01.24.) 배포</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>2026년 설 명절 전통시장 주변도로 주차허용구간 안내</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>'26. 2월 도내 주요 문화예술행사 계획</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="notice-listbx">
+                            <div class="notice-item">
+                                <a href="#">
+                                    <em>2026-02-10</em>
+                                    <span>2026년도 수산종자 디지털 육종 플랫폼 구축사업 기간제근로자 채용시험 최종합격자 발표</span>
+                                </a>
+                            </div>
+                            <div class="notice-lists">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span>강원특별자치도영월의료원 채용 안내</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>('26년 1월분) 고향사랑기부제 답례품 정산 안내</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>수산물 방사능 검사 결과(1. 28. 기준)</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>강원특별자치도보건환경연구원 감염병자료실(2026년 4주차, 01.18.~.01.24.) 배포</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>2026년 설 명절 전통시장 주변도로 주차허용구간 안내</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>'26. 2월 도내 주요 문화예술행사 계획</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="notice-listbx">
+                            <div class="notice-item">
+                                <a href="#">
+                                    <em>2026-01-23</em>
+                                    <span>｢강원특별자치도 도세 감면 조례｣ 일부개정조례안 입법예고</span>
+                                </a>
+                            </div>
+                            <div class="notice-lists">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span>「강원특별자치도 공무원 행동강령」일부개정규칙안 입법예고</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>('26년 1월분) 고향사랑기부제 답례품 정산 안내</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>수산물 방사능 검사 결과(1. 28. 기준)</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>강원특별자치도보건환경연구원 감염병자료실(2026년 4주차, 01.18.~.01.24.) 배포</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>2026년 설 명절 전통시장 주변도로 주차허용구간 안내</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>'26. 2월 도내 주요 문화예술행사 계획</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="notice-listbx">
+                            <div class="notice-item">
+                                <a href="#">
+                                    <em>2026-01-08</em>
+                                    <span>2026. 1. 12.자 인사발령사항</span>
+                                </a>
+                            </div>
+                            <div class="notice-lists">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span>2026. 1. 1일자 인사발령사항</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>('26년 1월분) 고향사랑기부제 답례품 정산 안내</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>수산물 방사능 검사 결과(1. 28. 기준)</span>
+                                            <em>2026-02-02</em>
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>강원특별자치도보건환경연구원 감염병자료실(2026년 4주차, 01.18.~.01.24.) 배포</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>2026년 설 명절 전통시장 주변도로 주차허용구간 안내</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>'26. 2월 도내 주요 문화예술행사 계획</span>
+                                            <em>2026-01-30</em>
+                                        </a>                                   
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="notice-slidebox">
                     <div class="notice-slidebox-slides">
@@ -370,11 +622,11 @@
                             <a href="#"><img src="./img/popupzone_PPGWPV02_20251210165904.jpg" alt="popup"></a>
                         </div>
                     </div>
-                    <div class="notice-slidebox-control" id="controlsBox">
-                        <span class="page-info"><span id="current-page">01</span> / 12</span>
-                        <div class="btn btn-prev" id="prevBtn">이전</div>
-                        <div class="btn btn-pause" id="toggleBtn">정지</div>
-                        <div class="btn btn-next" id="nextBtn">다음</div>
+                    <div class="notice-slidebox-control controlsBox">
+                        <span class="page-info"><span id="current-page">01</span> / 03</span>
+                        <div class="btn btn-prev prevBtn">이전</div>
+                        <div class="btn btn-pause toggleBtn">정지</div>
+                        <div class="btn btn-next nextBtn">다음</div>
                         <div class="btn btn-list">목록</div>
                     </div>
                 </div>
@@ -445,6 +697,176 @@
                                 </div>   
                             </div>
                         </div>
+                        <div class="conlist-box">
+                            <div class="ill-bx">
+                                <strong>행정&middot;예산</strong>
+                                <img src="./img/information02.png" alt="information">
+                            </div>
+                            <div class="link-bx">
+                                <div class="text-link">
+                                    <a href="#">민원안내</a>
+                                    <a href="#">민원서식/편람</a>
+                                    <a href="#">여권발급신청방법</a>
+                                    <a href="#">민원상담신청</a>
+                                    <a href="#">민원처리공개목록</a>
+                                    <a href="#">예산낭비신고</a>
+                                    <a href="#">복지·보조금 부정 신고</a>
+                                    <a href="#">시군민원실</a>
+                                    <a href="#">정부24</a>
+                                    <a href="#">정책토론</a>
+                                    <a href="#">사이버 설문조사</a>
+                                    <a href="#">규제신문고</a>
+                                    <a href="#">규제입증요청제</a>
+                                    <a href="#">인권강원</a>
+                                    <a href="#">공직선거비리 익명신고</a>
+                                    <a href="#">111신고센터</a>
+                                </div>
+                                <div class="icon-link">
+                                    <a href="#"><img src="./img/icon_information_01.png" alt="information">행정<br>심판 · 소청</a>
+                                    <a href="#"><img src="./img/icon_information_02.png" alt="information">부패<br>공익신고</a>
+                                    <a href="#"><img src="./img/icon_information_03.png" alt="information">도민<br>고충처리위원회</a>
+                                    <a href="#"><img src="./img/icon_information_05.png" alt="information">강원특별자치도<br>도민 감사관</a>
+                                    <a href="#"><img src="./img/icon_information_06.png" alt="information">규제개혁<br>포털</a>
+                                    <a href="#"><img src="./img/icon_information_07.png" alt="information">도민제안<br>안내</a>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="conlist-box">
+                            <div class="ill-bx">
+                                <strong>주택&middot;토지</strong>
+                                <img src="./img/information03.png" alt="information">
+                            </div>
+                            <div class="link-bx">
+                                <div class="text-link">
+                                    <a href="#">민원안내</a>
+                                    <a href="#">민원서식/편람</a>
+                                    <a href="#">여권발급신청방법</a>
+                                    <a href="#">민원상담신청</a>
+                                    <a href="#">민원처리공개목록</a>
+                                    <a href="#">예산낭비신고</a>
+                                    <a href="#">복지·보조금 부정 신고</a>
+                                    <a href="#">시군민원실</a>
+                                    <a href="#">정부24</a>
+                                    <a href="#">정책토론</a>
+                                    <a href="#">사이버 설문조사</a>
+                                    <a href="#">규제신문고</a>
+                                    <a href="#">규제입증요청제</a>
+                                    <a href="#">인권강원</a>
+                                    <a href="#">공직선거비리 익명신고</a>
+                                    <a href="#">111신고센터</a>
+                                </div>
+                                <div class="icon-link">
+                                    <a href="#"><img src="./img/icon_information_01.png" alt="information">행정<br>심판 · 소청</a>
+                                    <a href="#"><img src="./img/icon_information_02.png" alt="information">부패<br>공익신고</a>
+                                    <a href="#"><img src="./img/icon_information_03.png" alt="information">도민<br>고충처리위원회</a>
+                                    <a href="#"><img src="./img/icon_information_05.png" alt="information">강원특별자치도<br>도민 감사관</a>
+                                    <a href="#"><img src="./img/icon_information_06.png" alt="information">규제개혁<br>포털</a>
+                                    <a href="#"><img src="./img/icon_information_07.png" alt="information">도민제안<br>안내</a>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="conlist-box">
+                            <div class="ill-bx">
+                                <strong>기업&middot;투자</strong>
+                                <img src="./img/information04.png" alt="information">
+                            </div>
+                            <div class="link-bx">
+                                <div class="text-link">
+                                    <a href="#">민원안내</a>
+                                    <a href="#">민원서식/편람</a>
+                                    <a href="#">여권발급신청방법</a>
+                                    <a href="#">민원상담신청</a>
+                                    <a href="#">민원처리공개목록</a>
+                                    <a href="#">예산낭비신고</a>
+                                    <a href="#">복지·보조금 부정 신고</a>
+                                    <a href="#">시군민원실</a>
+                                    <a href="#">정부24</a>
+                                    <a href="#">정책토론</a>
+                                    <a href="#">사이버 설문조사</a>
+                                    <a href="#">규제신문고</a>
+                                    <a href="#">규제입증요청제</a>
+                                    <a href="#">인권강원</a>
+                                    <a href="#">공직선거비리 익명신고</a>
+                                    <a href="#">111신고센터</a>
+                                </div>
+                                <div class="icon-link">
+                                    <a href="#"><img src="./img/icon_information_01.png" alt="information">행정<br>심판 · 소청</a>
+                                    <a href="#"><img src="./img/icon_information_02.png" alt="information">부패<br>공익신고</a>
+                                    <a href="#"><img src="./img/icon_information_03.png" alt="information">도민<br>고충처리위원회</a>
+                                    <a href="#"><img src="./img/icon_information_05.png" alt="information">강원특별자치도<br>도민 감사관</a>
+                                    <a href="#"><img src="./img/icon_information_06.png" alt="information">규제개혁<br>포털</a>
+                                    <a href="#"><img src="./img/icon_information_07.png" alt="information">도민제안<br>안내</a>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="conlist-box">
+                            <div class="ill-bx">
+                                <strong>복지&middot;여성</strong>
+                                <img src="./img/information05.png" alt="information">
+                            </div>
+                            <div class="link-bx">
+                                <div class="text-link">
+                                    <a href="#">민원안내</a>
+                                    <a href="#">민원서식/편람</a>
+                                    <a href="#">여권발급신청방법</a>
+                                    <a href="#">민원상담신청</a>
+                                    <a href="#">민원처리공개목록</a>
+                                    <a href="#">예산낭비신고</a>
+                                    <a href="#">복지·보조금 부정 신고</a>
+                                    <a href="#">시군민원실</a>
+                                    <a href="#">정부24</a>
+                                    <a href="#">정책토론</a>
+                                    <a href="#">사이버 설문조사</a>
+                                    <a href="#">규제신문고</a>
+                                    <a href="#">규제입증요청제</a>
+                                    <a href="#">인권강원</a>
+                                    <a href="#">공직선거비리 익명신고</a>
+                                    <a href="#">111신고센터</a>
+                                </div>
+                                <div class="icon-link">
+                                    <a href="#"><img src="./img/icon_information_01.png" alt="information">행정<br>심판 · 소청</a>
+                                    <a href="#"><img src="./img/icon_information_02.png" alt="information">부패<br>공익신고</a>
+                                    <a href="#"><img src="./img/icon_information_03.png" alt="information">도민<br>고충처리위원회</a>
+                                    <a href="#"><img src="./img/icon_information_05.png" alt="information">강원특별자치도<br>도민 감사관</a>
+                                    <a href="#"><img src="./img/icon_information_06.png" alt="information">규제개혁<br>포털</a>
+                                    <a href="#"><img src="./img/icon_information_07.png" alt="information">도민제안<br>안내</a>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="conlist-box">
+                            <div class="ill-bx">
+                                <strong>관광&middot;안내</strong>
+                                <img src="./img/information06.png" alt="information">
+                            </div>
+                            <div class="link-bx">
+                                <div class="text-link">
+                                    <a href="#">민원안내</a>
+                                    <a href="#">민원서식/편람</a>
+                                    <a href="#">여권발급신청방법</a>
+                                    <a href="#">민원상담신청</a>
+                                    <a href="#">민원처리공개목록</a>
+                                    <a href="#">예산낭비신고</a>
+                                    <a href="#">복지·보조금 부정 신고</a>
+                                    <a href="#">시군민원실</a>
+                                    <a href="#">정부24</a>
+                                    <a href="#">정책토론</a>
+                                    <a href="#">사이버 설문조사</a>
+                                    <a href="#">규제신문고</a>
+                                    <a href="#">규제입증요청제</a>
+                                    <a href="#">인권강원</a>
+                                    <a href="#">공직선거비리 익명신고</a>
+                                    <a href="#">111신고센터</a>
+                                </div>
+                                <div class="icon-link">
+                                    <a href="#"><img src="./img/icon_information_01.png" alt="information">행정<br>심판 · 소청</a>
+                                    <a href="#"><img src="./img/icon_information_02.png" alt="information">부패<br>공익신고</a>
+                                    <a href="#"><img src="./img/icon_information_03.png" alt="information">도민<br>고충처리위원회</a>
+                                    <a href="#"><img src="./img/icon_information_05.png" alt="information">강원특별자치도<br>도민 감사관</a>
+                                    <a href="#"><img src="./img/icon_information_06.png" alt="information">규제개혁<br>포털</a>
+                                    <a href="#"><img src="./img/icon_information_07.png" alt="information">도민제안<br>안내</a>
+                                </div>   
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -464,40 +886,40 @@
                     <div>
                         <a href="#">
                             <i></i>
-                            <strong>강원더몰</strong>
-                            <span>공식 온라인 쇼핑몰</span>
+                            <strong>강원혜택이지</strong>
+                            <span>쉽게 빠르게 간편하게!</span>
                             <img src="./img/img-easy.png" alt="mall">
                         </a>
                     </div>
                     <div>
                         <a href="#">
                             <i></i>
-                            <strong>강원더몰</strong>
-                            <span>공식 온라인 쇼핑몰</span>
+                            <strong>강원일자리정보망</strong>
+                            <span>맞춤형 구직&구인</span>
                             <img src="./img/img-giftcard.png" alt="mall">
                         </a>
                     </div>
                     <div>
                         <a href="#">
                             <i></i>
-                            <strong>강원더몰</strong>
-                            <span>공식 온라인 쇼핑몰</span>
+                            <strong>강원상품권</strong>
+                            <span>지역경제 활성화</span>
                             <img src="./img/webzine04.png" alt="mall">
                         </a>
                     </div>
                     <div>
                         <a href="#">
                             <i></i>
-                            <strong>강원더몰</strong>
-                            <span>공식 온라인 쇼핑몰</span>
+                            <strong>강원 축제&행사</strong>
+                            <span>1년 365일 언제나~</span>
                             <img src="./img/webzine05.png" alt="mall">
                         </a>
                     </div>
                     <div>
                         <a href="#">
                             <i></i>
-                            <strong>강원더몰</strong>
-                            <span>공식 온라인 쇼핑몰</span>
+                            <strong>강원 문화&예술</strong>
+                            <span>행복 충전! 다채로운 감동!</span>
                             <img src="./img/img-mall.png" alt="mall">
                         </a>
                     </div>
