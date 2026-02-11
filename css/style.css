@@ -660,10 +660,13 @@ main #banner{
     filter: brightness(0) invert(1);
 }
 .notice-slidebox-control>.btn-prev  { background-position: -221px -4px; }
-.notice-slidebox-control>.btn-pause { background-position: -244px -4px; }
-.notice-slidebox-control>.btn-play  { background-position: -270px -4px; }
+.notice-slidebox-control>.btn.stop { background-position: -244px -4px; }
+.notice-slidebox-control>.btn.play  { background-position: -270px -4px; }
 .notice-slidebox-control>.btn-next  { background-position: -296px -4px; }
 .notice-slidebox-control>.btn-list  { background-position: -319px -4px; }
+
+.mainslide .controls .btn.stop { background-position: -244px -4px; }
+.mainslide .controls .btn.play  { background-position: -270px -4px; }
 
 #information{
     background: #f5f5f9;
