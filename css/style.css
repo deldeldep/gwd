@@ -589,16 +589,22 @@ main #banner{
     font-size: 15px;
 }
 .notice-listbx .notice-lists ul li a{
+    width: 633px;
     display: flex;
     justify-content: space-between;
 }
 .notice-listbx .notice-lists ul li a span{
+    display: inline-block;
+    width: 553px;
     white-space: nowrap;
     padding-right: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.notice-listbx .notice-lists ul li a em{}
+.notice-listbx .notice-lists ul li a em{
+    display: inline-block;
+    width: 80px;
+}
 
 #notice .inner .notice-slidebox{
     width: 320px;
@@ -854,6 +860,7 @@ main #banner{
 .conlist-box .link-bx .icon-link a{
     flex: 1 15%;
     max-width: 150px;
+    font-size: 14px;
     text-align: center;
     line-height: 1.3;
 }
@@ -1006,7 +1013,7 @@ footer h1 a img{
     margin-right: 15px;
     width: 240px;
 }
-.footerL .site-bx .family a{
+.footerL .site-bx .family{
     display: flex;
     height: 50px;
     border-radius: 5px;

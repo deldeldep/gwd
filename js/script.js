@@ -105,7 +105,6 @@ $(function(){
 
         $('.tabcon>div').hide(); 
         $('.tabcon>div').eq(i).show(); 
-        $('.tabcon>div').eq(i).find('.ill-bx').css({rotateY : '0deg'}); 
 
     })
 })
